@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 messages=$(curl -s https://raw.githubusercontent.com/ycombinator/funny-commit-messages/master/messages)
 num_messages=$(echo "$messages" | wc -l)
