@@ -1,0 +1,8 @@
+#!/bin/bash
+
+messages=$(curl -s https://raw.githubusercontent.com/ycombinator/funny-commit-messages/master/messages)
+num_messages=$(echo "$messages" | wc -l)
+
+random_index=$[RANDOM % num_messages + 1]
+
+echo "$messages" | head -$random_index | tail -1
